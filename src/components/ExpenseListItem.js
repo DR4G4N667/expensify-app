@@ -1,10 +1,9 @@
 import React from 'react';
-import { connect } from 'react-redux'; 
 import { Link } from 'react-router-dom';
 
-const ExpenseListItem = ({description, amount, createdAt, id}) => (
+const ExpenseListItem = ({ id, description, amount, createdAt }) => (
   <div>
-    <Link to={`/eddit/${id}`}>
+    <Link to={`/edit/${id}`}>
       <h3>{description}</h3>
     </Link>
     <p>{amount} - {createdAt}</p>
